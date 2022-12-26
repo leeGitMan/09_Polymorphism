@@ -45,10 +45,10 @@ public class PolyService {
 		// ****** 다형성 업캐스팅 작성법 ******
 		
 		// 1. 자식 객체가 부모 객체로 변했기 때문에
-		// 	  자식만의 고유한 필드, 메서드를 사용할 수 없다.
+		// 	  ** 자식만의 고유한 필드, 메서드를 사용할 수 없다. **
 		
 		
-		// 1-1) ca (부모 = 부모)
+		// 1-1) car (부모 = 부모)
 		car.setEngine("v6 6기통 엔진");
 		car.setFuel("휘발유");
 		car.setWheel(4);
@@ -95,7 +95,7 @@ public class PolyService {
 		
 		
 		Car[] arr = new Car[3]; // 부모타입 참조변수 배열 선언 및 할당
-								// 각 배열으 요소가 원래는 Car	타입 참조 변수여야함.
+								// 각 배열의 요소가 원래는 Car	타입 참조 변수여야함.
 		
 		arr[0] = car; // Car 주소 *** Car 객체 (Car주소는 Car타입 객체)
 		// arr[0] Car 참조 변수
@@ -200,12 +200,15 @@ public class PolyService {
 		// 그럼 Tesla타입이 되었기 떄문에 처음 상속받은 그 상태처럼 Car 필드와 메서드도 사용가능?
 		
 		
-		Car c1 = new Tesla("전기모터" , "전기" , 4, 50000);
+		Car c1 = new Tesla("전기모터" , "전기" , 4, 100000);
 		
 		// c1.getBatterCapacity(); --> 당연히 안됨 현재 부모타입의 객체이기 때문에
 		// 가능하게 하려면
 		
-		System.out.println( ((Tesla)c1).getBatteryCapacity() );
+		System.out.println(c1.toString());
+		
+		
+		//System.out.println( ((Tesla)c1).getBatteryCapacity() );
 		
 		
 		// 주의!
