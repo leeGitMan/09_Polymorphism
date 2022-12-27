@@ -8,7 +8,7 @@ public class Run {
 		
 		PolyService a = new PolyService();
 		
-		a.ex3();
+		a.ex4();
 		
 
 	}

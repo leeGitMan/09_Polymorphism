@@ -70,7 +70,7 @@ public class PolyService {
 		car2.setEngine("전기모터");
 		car2.setFuel("전기");
 		car2.setWheel(4);
-		// car2.setBatteryCapacity(100000);  --> 에러 --> 자식의 고유 필드를 사용할 수 없다.
+		// car2.setBatteryCapacity(100000);  --> 에러 --> 자식의 고유 필드, 메서드를 사용할 수 없다.
 		// -> Car 타입에는 setBatterCapacity 메서드가 정의 안되어있다.
 		
 		
@@ -79,7 +79,7 @@ public class PolyService {
 		car3.setEngine("경차엔진");
 		car3.setFuel("휘발유");
 		car3.setWheel(4);
-		// car3.setDiscountOffer(0.5); --> 에러 --> 자식의 고유 필드 사용불가
+		// car3.setDiscountOffer(0.5); --> 에러 --> 자식의 고유 필드,메서드를 사용불가
 		// -> Car 타입에는 setDiscountOffer 메서드가 정의 되어있지 않다.
 		
 		
@@ -239,7 +239,7 @@ public class PolyService {
 		Car c1 = new Tesla();
 		//Car c1 = new Spark();
 		
-		// Spark s1 = (Spark)c1; // 다운 캐스팅 --> 형변환 예외 오류
+		//Spark s1 = (Spark)c1; // 다운 캐스팅 --> 형변환 예외 오류
 		
 		
 		// 문제점 1.

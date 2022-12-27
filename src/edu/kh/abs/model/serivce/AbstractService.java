@@ -22,6 +22,8 @@ public class AbstractService {
 	// whale
 	
 	
+	
+	
 	// TypeBirds
 	// TypeMammalia
 	// TypePisces
@@ -63,9 +65,11 @@ public class AbstractService {
 		// 타입으로써의 역할은 수행 하지만 객체로서의 역할은 못한다.
 		
 		
-		TypeMammalia[] mammalia = new TypeMammalia[] {cat,dog,whale};
+		TypeMammalia[] mammalia = new TypeMammalia[] {cat,dog,whale}; 
 		TypeBirds[] birds = new TypeBirds[] {chicken, eagle, penguin};
 		TypePsices[] psices = new TypePsices[] {shark};
+		
+		
 		
 		//Animal[] animal = new Animal[] {cat, dog, whale, chicken, penguin, eagle, shark};
 		Animal[][] animal = new Animal[][] {mammalia, birds, psices}; // -- > 2차원 객체배열
@@ -99,7 +103,7 @@ public class AbstractService {
 			if(animal[i][j] instanceof Shark) {
 				System.out.println("=============");
 				Shark s1 = (Shark) animal[i][j];
-				s1.swimming();
+				s1.swimming(); 
 				System.out.println("=============");
 			}
 			
